@@ -15,7 +15,7 @@ export class MealsService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} meal`;
+    return this.prisma.meals.findMany()
   }
 
   update(id: number, updateMealDto: any) {
